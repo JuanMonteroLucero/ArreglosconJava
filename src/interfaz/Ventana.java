@@ -4,6 +4,7 @@
  */
 package interfaz;
 
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -71,10 +72,19 @@ public class Ventana extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3);
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones"));
-        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel4.setLayout(new java.awt.GridLayout());
 
+        jButton1.setBackground(new java.awt.Color(22, 160, 133));
+        jButton1.setForeground(new java.awt.Color(51, 0, 51));
         jButton1.setText("Agregar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -82,6 +92,7 @@ public class Ventana extends javax.swing.JFrame {
         });
         jPanel4.add(jButton1);
 
+        jButton2.setBackground(new java.awt.Color(26, 188, 156));
         jButton2.setText("Mostrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,8 +101,8 @@ public class Ventana extends javax.swing.JFrame {
         });
         jPanel4.add(jButton2);
 
+        Ordenar.setBackground(new java.awt.Color(46, 204, 113));
         Ordenar.setText("Ordenar");
-        Ordenar.setActionCommand("Ordenar");
         Ordenar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OrdenarActionPerformed(evt);
@@ -158,6 +169,18 @@ public class Ventana extends javax.swing.JFrame {
            evt.consume();
        }
     }//GEN-LAST:event_ResultadoKeyTyped
+
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        // TODO add your handling code here:
+          jButton1.setBackground(new java.awt.Color(51, 0, 51));
+        jButton1.setForeground(new java.awt.Color(22, 160, 133));
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+        // TODO add your handling code here:
+          jButton1.setBackground(new java.awt.Color(22, 160, 133));
+        jButton1.setForeground(new java.awt.Color(51, 0, 51));
+    }//GEN-LAST:event_jButton1MouseExited
 
     /**
      * @param args the command line arguments
